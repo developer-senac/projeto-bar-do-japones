@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: linear-gradient(180deg, #442103, #503b02);
+    color: rgb(253, 251, 251);
+}
+
+
+.logo {
+    width: 80px; 
+    height: auto;
+}
+
+/* Menu */
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header ul li:hover {
+    color: #c7a17a; 
+}
+
+
+.carrossel {
+    width:90%;
+    height:450px;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.slides {
+    display: flex;
+    width:300%;
+    height:100%;
+    animation: slide 5s infinite;
+}
+
+.slides img {
+    width: 33.33%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes slide {
+    0 % {
+        transform: translateX(0%);
+    }
+
+    30 % {
+        transform: translateX(0%);
+    }
+
+    35% {
+        transform: translateX(33.33%);
+    }
+
+
+}
