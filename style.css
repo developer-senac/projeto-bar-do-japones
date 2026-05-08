@@ -14,7 +14,7 @@ header {
     justify-content: space-between; /* Distribui os blocos: esquerda, centro e direita */
     padding: 10px 20px;
     background-color: bisque;
-    border: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
  
 header ul {
@@ -44,7 +44,7 @@ header ul {
     display: flex; /* Coloca as imagens em linha */
     width: 300%; /* Largura total para 3 imagens (100% cada) */
     height: 100%;
-    animation: slide 5s infinite; /* Animação de 15 segundos, repetindo infinitamente */
+    animation: slide 10s infinite; 
 }
  
 .slides img {
@@ -82,3 +82,23 @@ header ul {
         transform: translateX(-66.66%);
     }
  }
+
+/* --- ADICIONANDO RESPONSIVIDADE (PARA CELULARES) --- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha logo e menu no celular */
+        gap: 15px;
+        text-align: center;
+    }
+
+    header ul {
+        gap: 10px;
+        font-size: 14px; /* Diminui um pouco a letra do menu */
+    }
+
+    .carrossel {
+        height: 250px; /* Diminui a altura do carrossel em telas pequenas */
+        width: 95%;    /* Ocupa mais espaço lateral no celular */
+    }
+}
