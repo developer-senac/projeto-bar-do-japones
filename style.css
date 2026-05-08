@@ -1,76 +1,84 @@
-/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*Remove espaços internos e externos*/
+    padding: 0; /*Remove espaços internos e externos*/
+    box-sizing: border-box; /*Garante o tamanho exato de um*/
 }
-
+ 
+body {
+    background-color: rgba(255, 228, 196, 0.682);
+}
+ 
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    background: linear-gradient(180deg, #442103, #503b02);
-    color: rgb(253, 251, 251);
+    align-items: center; /* Alinha todos verticalmente ao centro */
+    justify-content: space-between; /* Distribui os blocos: esquerda, centro e direita */
+    padding: 10px 20px;
+    background-color: bisque;
+    border: 2px solid gray;
 }
-
-
-.logo {
-    width: 80px; 
-    height: auto;
-}
-
-/* Menu */
+ 
 header ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    display: flex; /* Faz a lista ficar na horizontal */
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 20px; /* Espaçamento entre os itens da lista */
+    margin: 0;
+    padding: 0;
 }
-
-header ul li {
-    cursor: pointer;
-    transition: 0.3s;
+ 
+.logo {
+    height: 50px; /* Ajuste o tamanho da sua logo aqui */
+    width: auto;
+    border-radius: 50%;
 }
-
-header ul li:hover {
-    color: #c7a17a; 
-}
-
-
+ 
 .carrossel {
-    width:90%;
-    height:450px;
-    margin:20px auto;
-    overflow:hidden;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    width: 90%; /*Carrossel ocupa 90% da largura da tela*/
+    height: 400px; /* Altura fixa do carrossel */
+    margin: 30px auto; /* 30px em cima e embaixo, o auto vai nas laterais para centralizar o elemento */
+    overflow: hidden; /* Esconde as partes das imagens que saem do carrossel */
+    border-radius: 15px; /* Deixa as bordas arredondadas */
+    border: 2px solid gray; /* Adiciona uma borda cinza ao redor do carrossel */
 }
-
+ 
 .slides {
-    display: flex;
-    width:300%;
-    height:100%;
-    animation: slide 5s infinite;
+    display: flex; /* Coloca as imagens em linha */
+    width: 300%; /* Largura total para 3 imagens (100% cada) */
+    height: 100%;
+    animation: slide 5s infinite; /* Animação de 15 segundos, repetindo infinitamente */
 }
-
+ 
 .slides img {
-    width: 33.33%;
-    height:100%;
-    object-fit:cover;
+    width: 33.33%; /* Cada imagem ocupa 100% do carrossel */
+    height: 100%; /*Cada imagem ocupa 100% do carrossel*/
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
-
+ 
 @keyframes slide {
-    0 % {
+ 
+    /* Primeira imagem */
+    0% {
         transform: translateX(0%);
     }
-
-    30 % {
+ 
+    30% {
         transform: translateX(0%);
     }
-
+ 
+    /* Segunda imagem */
     35% {
-        transform: translateX(33.33%);
+        transform: translateX(-33.33%);
     }
-
-
-}
+ 
+    65% {
+        transform: translateX(-33.33%);
+    }
+ 
+    /* Terceira imagem */
+    70% {
+        transform: translateX(-66.66%);
+    }
+ 
+    100% {
+        transform: translateX(-66.66%);
+    }
+ }
