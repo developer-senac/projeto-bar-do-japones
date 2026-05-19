@@ -86,6 +86,14 @@ header ul {
 /* --- ADICIONANDO RESPONSIVIDADE (PARA CELULARES) --- */
 
 @media (max-width: 768px) {
+       
+    #secE {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
     header {
         flex-direction: column; /* Empilha logo e menu no celular */
         gap: 15px;
@@ -188,14 +196,21 @@ section p {
         font-size: 1.6rem;
     }
 }
-footer {
+#secE {
     background-color: #000000;
-    color: #ffffff;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    text-align: center;
-    font-size: 14px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+#secE p {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+
 
